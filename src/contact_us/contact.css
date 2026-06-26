@@ -1,0 +1,80 @@
+.hero-container {
+  position: relative;
+  width: 100%;
+  height: 90vh; /* Forces the parent element container to match your image height boundary */
+  background-color: #000000;
+  overflow: hidden;
+}
+
+.slider-img {
+  margin-top: 4rem;
+  width: 100%;
+  height: 100% !important; /* Changes to 100% so it perfectly fills the 90vh parent wrapper safely */
+  object-fit: cover;
+  filter: brightness(100%); 
+  display: block;
+}
+
+.custom-caption {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff !important;
+  text-align: center;
+  width: 85%;
+  max-width: 800px;
+  z-index: 2;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); /* Ensures your text remains readable since the dark filter is gone */
+}
+
+.custom-caption h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.custom-caption p {
+  font-size: 1.25rem;
+  font-style: italic;
+  font-weight: 400;
+  opacity: 0.95;
+}
+
+/* Map Layout Framework */
+.map-section-wrapper {
+  width: 100%;
+  padding: 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+/* Responsive Map Container */
+.map-responsive-container {
+  width: 70%;
+  max-width: 1000px; 
+  height: 450px;    
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.map-responsive-container iframe {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .hero-container {
+    height: 60vh; /* Scales down elegantly on phones so users don't have to scroll infinitely */
+  }
+  .map-responsive-container {
+    height: 320px;
+  }
+  .custom-caption h2 {
+    font-size: 2rem;
+  }
+}
