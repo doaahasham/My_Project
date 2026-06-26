@@ -1,0 +1,63 @@
+.custom-navbar {
+  background-color: #252525;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-toggler {
+  background-color: gray !important;
+  border: none;
+}
+
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
+.navbar-brand {
+  color: white !important;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.nav-link.active {
+  color: white !important;
+  font-weight: bold !important;
+  transition: color 0.3s ease;
+}
+
+.nav-link.home-link {
+  color: #e65f5c !important;
+  font-weight: bold !important;
+}
+
+.nav-link.active:hover {
+  background-color: #e65f5c !important;
+  border-radius: 10px;
+  padding: 7px 10px;
+}
+
+.dropdown-menu {
+  background-color: #1a1a1a !important;
+  overflow: hidden !important;
+}
+
+.dropdown-item {
+  font-weight: bold !important;
+  color: white !important;
+  padding: 3px 10px !important;
+  width: 100% !important;
+  display: block !important;
+  box-sizing: border-box !important;
+  transition: background-color 0.3s ease !important;
+}
+
+hr {
+  background-color: #e65f5c !important;
+}
+
+.dropdown-item:hover {
+  background-color: #e65f5c !important;
+  text-indent: 10px !important;
+  transition: text-indent 0.3s ease !important;
+}
