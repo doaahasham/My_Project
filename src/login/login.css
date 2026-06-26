@@ -1,0 +1,97 @@
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f5f7fa;
+}
+
+.login-box {
+  width: 400px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.title {
+  text-transform: lowercase;
+  margin-bottom: 15px;
+}
+
+.social {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.social button {
+  border: none;
+  padding: 8px;
+  color: white;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.fb {
+  background: #1877f2;
+}
+
+.google {
+  background: #db4437;
+}
+
+.or {
+  margin: 15px 0;
+  font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 10px;
+  background: green;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.forgot {
+  color: #00aaff;
+  font-size: 13px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.signup-btn {
+  width: 100%;
+  padding: 10px;
+  background: #0d6efd;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.error-border, .is-invalid {
+  border: 2px solid #dc3545 !important;
+  color: #dc3545 !important;
+  background-color: #fff8f8 !important; 
+}

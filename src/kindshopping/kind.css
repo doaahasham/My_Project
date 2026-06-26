@@ -1,0 +1,90 @@
+.main-slider-wrapper {
+  width: 100%;
+}
+
+/* FORCE FULL HEIGHT */
+#carouselExampleCaptions,
+.carousel-inner,
+.carousel-item {
+  height: 100vh !important; /* Standard full viewport height */
+  position: relative;
+}
+
+/* IMAGE FIX */
+.carousel-item img.slider-img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* OVERLAY FOR TEXT READABILITY */
+.carousel-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+  z-index: 1;
+}
+
+/* --- FIXING THE POSITION TO MATCH THE IMAGE --- */
+.carousel-inner .carousel-caption.custom-caption {
+  position: absolute !important;
+  bottom: 40px !important; /* Moves the whole text block down to the bottom */
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  top: auto !important;    /* Removes the middle alignment centering */
+  width: 100% !important;
+  max-width: 700px;
+  text-align: center !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  right: auto !important;
+  z-index: 10 !important;
+}
+
+/* TEXT STYLING */
+.custom-caption h2 {
+  font-size: 1.65rem !important;
+  font-weight: 500 !important;
+  color: #ffffff !important;
+  margin-bottom: 6px !important;
+}
+
+.custom-caption p {
+  font-size: 0.95rem !important;
+  color: #ffffff !important;
+  opacity: 0.85 !important;
+  margin-bottom: 15px !important; /* Creates clear spacing right above the dashes */
+}
+
+/* --- THE 4 DASHES INDICATORS POSITIONING --- */
+.custom-caption .custom-indicators {
+  position: relative !important;
+  bottom: 0 !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  display: flex !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  z-index: 15 !important;
+}
+
+/* DASHES LOOKS AND FEEL */
+.custom-indicators button {
+  box-sizing: content-box;
+  flex: 0 1 auto;
+  width: 35px !important;   /* Length of your horizontal line */
+  height: 3px !important;   /* Thin line depth */
+  padding: 0 !important;
+  cursor: pointer;
+  background-color: #ffffff !important;
+  border: none !important;
+  opacity: 0.4 !important;
+  transition: opacity 0.4s ease;
+}
+
+.custom-indicators button.active {
+  opacity: 1 !important;
+}
