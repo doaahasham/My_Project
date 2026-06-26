@@ -1,0 +1,63 @@
+/* الحاوية الأساسية للكارت */
+.deal-card {
+  position: relative;
+  overflow: hidden; /* تمنع خروج المربع الأحمر عن حدود الصورة نهائياً */
+  border-radius: 8px;
+  
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+/* ضبط أبعاد ثابتة وموحدة لصور العروض */
+.deal-card .deal-img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  display: block;
+}
+
+
+
+/* المربع الأحمر التفاعلي (ينطلق من نقطة في المنتصف ويغطي 90%) */
+.deal-card .deal-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90%;  
+  height: 90%; 
+  background-color: rgba(226, 62, 74, 0.94); 
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+  
+
+  transform: translate(-50%, -50%) scale(0); 
+  opacity: 0;
+  transition: transform 0.4s ease-in-out, opacity 0.3s ease;
+  z-index: 5;
+}
+
+.deal-card:hover .deal-overlay {
+  transform: translate(-50%, -50%) scale(1); 
+  opacity: 1;
+}
+
+
+.deal-overlay h3 {
+  color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 8px;
+  font-size: 1.5rem;
+}
+
+.deal-overlay p, 
+.deal-overlay h5 {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 400;
+  font-size: 1.1rem;
+  margin: 0;
+}
